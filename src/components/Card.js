@@ -1,13 +1,12 @@
-import photo from "../images/katie-zaferes.png";
 import star from "../images/star.png";
 
-export default function Card() {
+export default function Card(props) {
     return (
         <section className="Card">
             <div className="card--photoSection">
                 <img 
-                    src={photo} 
-                    alt="Katie Zaferes"
+                    src={require(`../images/${props.img}`)}
+                    alt=""
                     className="card--photo" />
                 <div className="card--info">SOLD OUT</div>
             </div>
@@ -16,12 +15,12 @@ export default function Card() {
                     src={star} 
                     alt="star"
                     className="card--star" />
-                    <span>5.0</span>
-                    <span className="gray">(6) • </span>
-                    <span className="gray">USA</span>
+                    <span>{props.rating}</span>
+                    <span className="gray">({props.reviewCount}) • </span>
+                    <span className="gray">{props.country}</span>
             </div>
-            <p>Life lessons with Katie Zaferes</p>
-            <p><strong>From $136</strong> / person</p>
+            <p>{props.title}</p>
+            <p><strong>From ${props.price}</strong> / person</p>
         </section>
     )
 }
