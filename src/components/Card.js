@@ -1,13 +1,21 @@
 import star from "../images/star.png";
 
 export default function Card(props) {
+    let badgeText
+    if (props.openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.location.toLowerCase() === "online") {
+        badgeText = "Online"
+    };
+    
+
     return (
         <section className="Card">
             <img 
                 src={require(`../images/${props.img}`)}
                  alt=""
                 className="card--photo" />
-            {props.openSpots === 0 && <div className="card--badge">SOLD OUT</div>}
+            {badgeText && <div className="card--badge">{badgeText}</div>}
             <div className="card--stats" >
                 <img 
                     src={star} 
