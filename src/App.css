@@ -2,6 +2,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+section {
+    padding: 20px;
+}
+ 
 nav {
     height: 70px;
     background-color: #FFF;
@@ -49,20 +53,32 @@ nav {
     line-height: 1.3;
 }
 
+.cards--list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+    overflow-x: auto;
+}
+
 
 .Card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 175px;
     margin-top: 50px;
     font-size: 12px;
 }
 
 .card--photoSection {
     position: relative;
-    width: 176px;
+    width: 175px;
 }
 
 .card--photo {
     width: 100%;
     border-radius: 9px;
+    margin-bottom: 5px;
 }
 .card--info {
     position: absolute;
@@ -87,4 +103,13 @@ nav {
 
 .card--star {
     height: 14px;
+}
+
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card--price {
+    margin-top: auto;
 }
