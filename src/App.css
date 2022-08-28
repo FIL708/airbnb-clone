@@ -1,10 +1,6 @@
 body {
     font-family: "Poppins", sans-serif;
 }
-
-section {
-    padding: 20px;
-}
  
 nav {
     height: 70px;
@@ -58,10 +54,12 @@ nav {
     flex-wrap: nowrap;
     gap: 25px;
     overflow-x: auto;
+    padding: 20px;
 }
 
 
 .Card {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 0 0 auto;
@@ -70,30 +68,22 @@ nav {
     font-size: 12px;
 }
 
-.card--photoSection {
-    position: relative;
-    width: 175px;
-}
-
 .card--photo {
+    position: relative;
     width: 100%;
     border-radius: 9px;
     margin-bottom: 5px;
 }
-.card--info {
+.card--badge {
     position: absolute;
+    padding: 4px 6px;
     top: 7px;
     left: 7px;
-    width: 61px;
-    height: 20px;
-    z-index: 9999;
     background-color: #FFF;
     border-radius: 2px;
     color: #222;
     font-size: 10.2px;
     font-weight: 700;
-    text-align: center;
-    line-height: 20px;
 }
 
 .card--stats {

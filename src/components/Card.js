@@ -3,13 +3,11 @@ import star from "../images/star.png";
 export default function Card(props) {
     return (
         <section className="Card">
-            <div className="card--photoSection">
-                <img 
-                    src={require(`../images/${props.img}`)}
-                    alt=""
-                    className="card--photo" />
-                <div className="card--info">SOLD OUT</div>
-            </div>
+            <img 
+                src={require(`../images/${props.img}`)}
+                 alt=""
+                className="card--photo" />
+            {props.openSpots === 0 && <div className="card--badge">SOLD OUT</div>}
             <div className="card--stats" >
                 <img 
                     src={star} 
